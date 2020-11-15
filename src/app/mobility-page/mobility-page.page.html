@@ -1,0 +1,68 @@
+<ion-content>
+  <col>
+  <div class="ion-text-center">
+
+    <ion-row>
+    
+
+      <div class="flex">
+    
+    
+        <h2 class="roboto"> You chose </h2>
+        <ion-img class='logosize':src="./assets/greenleave.png"></ion-img>
+    
+        </div>
+    </ion-row>
+
+
+    <h1 class="robotobold"> Mobility Test</h1>
+  
+
+  <br>
+ 
+<h4> Quantity seasonal fruits and vegetables you buy</h4>
+
+</div>
+
+    <ion-list>
+      <ion-item *ngFor="let reponses1 of reponses1">
+        <ion-label>{{reponses1.name}}</ion-label>
+        <ion-checkbox slot="start" [(ngModel)]="reponses1.isChecked"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+
+    <br>
+
+    <div class="ion-text-center">
+
+  <h4> Frequency of consumption of dairy products </h4>
+  </div>
+
+    <ion-list>
+      <ion-item *ngFor="let reponses2 of reponses2">
+        <ion-label>{{reponses2.name}}</ion-label>
+        <ion-checkbox slot="start" [(ngModel)]="reponses2.isChecked"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+
+    <br>
+
+    <div class="ion-text-center">
+    <h4> Frequency of meat consumption </h4>
+    </div>
+
+
+    <br>
+    <br>
+
+    <ion-row class="ion-justify-content-center">   
+
+
+      <ion-button href="/result-mobility-page" size="large" color="success" shape="round" > Submit test </ion-button>
+
+     </ion-row>
+
+
+</ion-content>
+
+

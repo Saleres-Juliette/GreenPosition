@@ -1,0 +1,46 @@
+
+//Bold Roboto font
+  .robotobold{
+    font-family: 'Roboto';
+    font-weight: bolder;
+  
+  }
+
+
+  // Bold Lato font
+  .latobold{
+font-family: 'Lato';
+font-weight: bold;
+
+  }
+
+  //Lato font
+
+  .lato{
+    font-family: 'Lato';
+    
+      }
+
+      //Justification
+
+
+  .flex{
+    display: flex;
+    justify-content: space-evenly;
+  
+  }
+
+  //Size of logo
+
+  .sizelogo {
+    width: 60px;
+    height: 60px;
+  }
+
+
+
+  //Background color 
+  ion-content {
+    --ion-background-color: #EFFCF4;
+    
+    }

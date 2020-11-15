@@ -1,0 +1,72 @@
+//Roboto font
+.roboto{
+        font-family: 'Roboto';
+        font-weight: bold;
+      
+      }
+
+//Lato font
+
+.lato{
+    font-family: 'Lato';
+
+    }
+
+
+//Bold Lato font  
+
+
+.latobold{
+        font-family: 'Lato';
+        font-weight: bold;
+    
+        }
+
+
+//Size of card
+.cardsize {
+    height: 210px;
+    margin : 50px;
+
+}
+
+//Size of logos
+
+
+.logosize {
+	width: 50px;
+	height: 50px;
+}
+
+//Size of arrow logo
+
+.arrowlogo{
+    width: 30px;
+	height: 30px;
+
+
+}
+
+//Justification
+
+.flex{
+    display: flex;
+    justify-content: space-evenly;
+  
+  }
+    
+//Background color of header
+  ion-header {
+    --ion-background-color: #D0E0D7;
+    
+    }
+
+
+//Background color of card number one
+
+    ion-card {
+        --ion-background-color: #B8CDC2;
+        
+        }
+
+

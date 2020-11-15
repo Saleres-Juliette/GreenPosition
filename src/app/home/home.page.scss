@@ -33,13 +33,45 @@
 
 }
 
-//Couleur de fond de l'appli
+//HomePage background color
 ion-content {
 --ion-background-color: #C8DDC0;
 
 }
 
-.button {
+
+
+//Justification between Social Networks logos
+
+.flex{
+  display: flex;
+  justify-content: space-evenly;
+
+}
+
+//Font Roboto
+.roboto{
+  font-family: 'Roboto';
 
 
 }
+
+
+
+//Green Position logo dimensions
+
+.size {
+	width: 370px;
+	height: 250px;
+
+}
+
+//Dimensions logo social networks
+
+.logo {
+	width: 40px;
+	height: 40px;
+}
+
+
+
