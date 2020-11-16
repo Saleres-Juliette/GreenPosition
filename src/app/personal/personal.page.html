@@ -14,34 +14,32 @@
 </ion-header>
 
 <ion-content>
-  <ion-card class="cardsize" color="tertiary">
-    <div class="flex">
-  <ion-img class='logosize':src="./assets/car.png"></ion-img>
 
-  <ion-row class="ion-justify-content-center">  
+  <ion-slides [options]="sliderConfig">
+    <ion-slide *ngFor="let product of items">
+      <div>
+        <ion-card class="cardsize" color="tertiary">
+          <div class="flex">
+            <ion-img class='logosize':src="./assets/car.png"></ion-img>
+            <ion-row class="ion-justify-content-center">  
+              <h2 class="lato" > {{product.category}} TEST </h2>
+            </ion-row>
+          </div>
+          <ion-col>
+            <ion-row class="ion-justify-content-center">   
+              <ion-button href={{product.url}} class="lato" shape="round" color="medium" > See Result </ion-button>
+            </ion-row>
+            <br>
+              <ion-row class="ion-justify-content-center">
+                <ion-button href="/advice-feed-page" class="lato" shape="round" color="medium" > Advices </ion-button>
+              </ion-row>
+          </ion-col>
+        </ion-card>
+      </div>
+    </ion-slide>
+  </ion-slides>
+  
 
-  <h2 class="lato" > MOBILITY TEST </h2>
-  </ion-row>
-
-</div>
-
-<ion-col>
-
-  <ion-row class="ion-justify-content-center">   
-    
- <ion-button href="/result-mobility-page" class="lato" shape="round" color="medium" > See Result </ion-button>
-
- </ion-row>
- <br>
- <ion-row class="ion-justify-content-center">
-
-  <ion-button href="/advice-feed-page" class="lato" shape="round" color="medium" > Advices </ion-button>
-
- </ion-row>
-
- </ion-col>
- 
-  </ion-card>
   <ion-card>
 
 
