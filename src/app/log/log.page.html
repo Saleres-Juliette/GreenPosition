@@ -20,8 +20,11 @@
       </ion-card>
           </ion-row>
 
+          
+
 <ion-row class="ion-justify-content-center">   
 <ion-card class="minicard" color="light" shape="round">
+  <div *ngIf="!connected">
 
     <ion-row class="ion-justify-content-center">   
 
@@ -30,7 +33,14 @@
 
     <ion-row class="ion-justify-content-center">   
 <ion-card color="secondary" class="cardsize">
-  <ion-input> Username : </ion-input>
+  <ion-item>
+
+ <ion-label> Email: </ion-label>
+  <ion-input type="email"[(ngModel)]="dataUser.email"> </ion-input>
+
+  </ion-item>
+  
+ 
 </ion-card>
     </ion-row>
     
@@ -40,26 +50,57 @@
   <ion-img class='image' :src="./assets/Password.png"></ion-img>
     </ion-row>
 
-    <ion-row class="ion-justify-content-center">   
+    <ion-row class="ion-justify-content-center">  
+      
+      
       <ion-card color="medium" class="cardsize">
-        <ion-input> Password : </ion-input>
+        <ion-item>
+
+          <ion-label>Password : </ion-label>
+    <ion-input type="password" [(ngModel)]="dataUser.password"> </ion-input>
+         
+           </ion-item>
+
+         
       </ion-card>
-          </ion-row>
+  
+    </ion-row>
+ 
+
+   
           <br>
           <br>
 
           <ion-row class="ion-justify-content-center">  
-          <ion-button href="/tests" size="default" fill="outline" color="success">LOG IN </ion-button>
+          <ion-button (click)="login()" size="default" fill="outline" color="success">LOG IN </ion-button>
+          <br>
+          <ion-button (click)="signUp()" size="default" fill="outline" color="success">SIGN UP </ion-button>
+
           </ion-row>
 
           <br>
           <br>
 
 
-
+</div>
 </ion-card>
 </ion-row>
 
+<div *ngIf="connected">
+  <div class="ion-text-center"> 
+    <ion-text class="roboto">
+      <h1>Welcome in Green Position Tests </h1>
+    </ion-text>
+
+<br>
+<ion-button href="/tests"> Click to start the tests </ion-button>
+<br>
+<br> <br> <br> 
+
+<ion-button (click)="logout()" size="default" fill="outline" color="danger">DECONNEXION</ion-button>
+
+</div>
+</div>
 
 </ion-content>
 
