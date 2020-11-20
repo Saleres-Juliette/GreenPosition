@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { DataResolverService } from './resolver/data-resolver.service';
 
 const routes: Routes = [
   {
@@ -58,10 +59,18 @@ const routes: Routes = [
   {
     path: 'essai',
     loadChildren: () => import('./essai/essai.module').then( m => m.EssaiPageModule)
-  },  {
+  },
+  {
     path: 'cart',
     loadChildren: () => import('./cart/cart.module').then( m => m.CartPageModule)
   },
+  {
+    path: 'test/:id',
+    resolve: {
+      special: DataResolverService
+    },
+    loadChildren:() => import( './accomodation-page/accomodation-page.module').then(m => m.AccomodationPagePageModule)
+  }
 
 ];
 

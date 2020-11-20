@@ -1,0 +1,22 @@
+{
+    "title" : "Accomodation",
+    "questions" : [
+        {
+            "title" : "What type of heating do you use",
+            "answers" : [
+                "Electric",
+                "Gas",
+                "Fuel oil",
+                "Wood"
+            ]
+        },
+        {
+            "title" : "Does the electrical supply of your house comes from renewable energies",
+            "answers" : [
+                "Yes",
+                "Some of it",
+                "No"
+            ]
+        }
+    ]
+}

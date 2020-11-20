@@ -1,0 +1,22 @@
+{
+    "title" : "mobility test",
+    "questions" : [
+        {
+            "title" : "How often do you use a car",
+            "answers" : [
+                "Once a week",
+                "2 times a week",
+                "3 times a week",
+                "more than 3 times a week"
+            ]
+        },
+        {
+            "title" : "How often do you take public transports",
+            "answers" : [
+                "Never",
+                "1 to 2 times a week",
+                "2 to 4 times a week"
+            ]
+        }
+    ]
+}

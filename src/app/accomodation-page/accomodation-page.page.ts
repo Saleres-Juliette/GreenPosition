@@ -1,4 +1,6 @@
+import { TestLoaderService } from './../services/test-loader.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-accomodation-page',
@@ -8,25 +10,19 @@ import { Component, OnInit } from '@angular/core';
 export class AccomodationPagePage {
 
 
-  reponses1 = [
-    { name: 'About 3/4', isChecked: false },
-    { name: 'About 1/2', isChecked: true },
-    { name: 'About 1/4', isChecked: false },
-  ];
-
-
-
- reponses2 = [
-    { name: 'Never (veganism)', isChecked: false },
-    { name: '1 to 2 times a day', isChecked: true },
-    { name: '2 to 4 times a day' , isChecked: false },
-  ];
-
-
-
-
-
+  data: any;
   myBoolean = true;
+
+  constructor(private route: ActivatedRoute, private router: Router) {
+
+  }
+
+  ngOnInit() {
+    if (this.route.snapshot.data["special"]) {
+      this.data = this.route.snapshot.data['special'];
+    }
+  }
+
 
   onMyBooleanChange() {
     console.log(this.myBoolean);
