@@ -12,7 +12,7 @@ export class CartService {
       adviceUrl: '/advice-feed-page'
     },
     {
-      category: 'feed',
+      category: 'Feed',
       resultUrl: '/result-feed-page',
       adviceUrl: '/advice-feed-page'
 
