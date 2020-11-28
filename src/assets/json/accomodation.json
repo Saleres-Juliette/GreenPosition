@@ -4,18 +4,39 @@
         {
             "title" : "What type of heating do you use",
             "answers" : [
-                "Electric",
-                "Gas",
-                "Fuel oil",
-                "Wood"
+                {
+                    "text":"Electric",
+                    "points": 3
+                },
+                {
+                    "text":"Gas",
+                    "points":"2"
+                },
+                {
+                    "text":"Fuel oil",
+                    "points": "1"
+                },
+                {
+                    "text":"Wood",
+                    "points": "0"
+                }
             ]
         },
         {
             "title" : "Does the electrical supply of your house comes from renewable energies",
             "answers" : [
-                "Yes",
-                "Some of it",
-                "No"
+                {
+                    "text":"Yes",
+                    "points": 2
+                },
+                {
+                    "text":"Some of it",
+                    "points":"1"
+                },
+                {
+                    "text":"No",
+                    "points": "0"
+                }
             ]
         }
     ]

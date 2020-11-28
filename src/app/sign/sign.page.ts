@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
+import { IdeaService, Idea } from 'src/app/services/idea.service';
 
 @Component({
   selector: 'app-sign',
@@ -19,11 +20,18 @@ email = '';
 userId = '';
 method = '';
 
+test: Idea = {
+  id:"null",
+  accomodation:"1",
+  mobility:"2",
+  dailyfeeding:"3"
+}
+
 
 
   constructor(
-    public afAuth: AngularFireAuth
-
+    public afAuth: AngularFireAuth,
+    private ideaService: IdeaService
     ) {
 
 this.afAuth.authState.subscribe(auth => {
@@ -51,11 +59,19 @@ this.dataUser = {
 
 
     signUp(){
-this.afAuth.createUserWithEmailAndPassword(this.dataUser.email, this.dataUser.password);
-this.dataUser = {
-  email: '',
-  password: ''
-};
+      this.afAuth.createUserWithEmailAndPassword(this.dataUser.email, this.dataUser.password).then( test =>
+        this.afAuth.idToken.subscribe(user => {
+          console.log(user);
+          this.test.id = user;
+          this.ideaService.addIdea(this.test);
+      })
+      );
+      this.dataUser = {
+        email: '',
+        password: ''
+      };
+      
+
 
     }
 

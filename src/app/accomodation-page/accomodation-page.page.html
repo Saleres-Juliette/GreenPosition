@@ -27,8 +27,8 @@
     <h4 class="ion-text-center"> {{question.title}} </h4>
       <ion-list>
         <ion-item *ngFor="let answer of question.answers">
-          <ion-label class="ion-text-center">{{answer}}</ion-label>
-          <ion-checkbox slot="start"></ion-checkbox>
+          <ion-label class="ion-text-center">{{answer.text}}</ion-label>
+          <ion-checkbox slot="start" (ionChange)="checkboxClick($event, answer.points)" ></ion-checkbox>
         </ion-item>
       </ion-list>
     <br>
@@ -36,10 +36,12 @@
     <ion-row class="ion-justify-content-center">   
 
 
-      <ion-button href="/result-accomodation-page" size="large" color="success" shape="round" > Submit test </ion-button>
+      <ion-button  size="large" color="success" shape="round" (click)="createTask()" > Submit test </ion-button>
 
      </ion-row>
 
-
+    <ion-item *ngFor="let item of items | async">
+      <ion-label>{{ item.name }}</ion-label>
+    </ion-item>
 </ion-content>
 
