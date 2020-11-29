@@ -19,7 +19,7 @@ export class AccomodationPagePage {
   Score: number = 0;
 
   test:Idea = {
-    id:"",
+    id:"kk",
     accomodation:"1",
     mobility:"2",
     dailyfeeding:"3"

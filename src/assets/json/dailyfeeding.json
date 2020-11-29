@@ -4,17 +4,35 @@
         {
             "title" : "Quantity seasonal fruits and vegetables you buy",
             "answers" : [
-                "About 3/4",
-                "About 1/2",
-                "About 1/4"
+                {
+                    "text":"About 3/4",
+                    "points": "2"
+                },
+                {
+                    "text":"About 1/2",
+                    "points":"1"
+                },
+                {
+                    "text":"About 1/4",
+                    "points": "0"
+                }
             ]
         },
         {
             "title" : "Frequency of consumption of dairy products",
             "answers" : [
-                "Never (veganism)",
-                "1 to 2 times a day",
-                "2 to 4 times a day"
+                {
+                    "text":"Never (veganism)",
+                    "points": "2"
+                },
+                {
+                    "text":"1 to 2 times a day",
+                    "points":"1"
+                },
+                {
+                    "text":"2 to 4 times a day",
+                    "points": "0"
+                }
             ]
         }
     ]

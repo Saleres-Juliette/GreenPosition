@@ -12,7 +12,7 @@ export class ResultAccomodationPagePage implements OnInit {
 
   UserScore: Idea = {
     id : "test",
-    accomodation : "0",
+    accomodation : "10",
     mobility : "0",
     dailyfeeding : "0",
   };
